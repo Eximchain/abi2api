@@ -1,0 +1,36 @@
+{
+  "name": "abi2api",
+  "version": "0.0.1",
+  "description": "CLI which ingests smart contract metadata & autogenerates a RESTful nodejs server API",
+  "main": "index.js",
+  "bin": "index.js",
+  "preferGlobal": true,
+  "scripts": {
+    "test": "mocha .tests/**.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eximchain/abi2api.git"
+  },
+  "keywords": [
+    "eximchain",
+    "ethereum",
+    "eth",
+    "smartcontract",
+    "smart",
+    "contract",
+    "codegen",
+    "swagger",
+    "openapi"
+  ],
+  "author": "John J.D. O'Sullivan",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Eximchain/abi2api/issues"
+  },
+  "homepage": "https://github.com/Eximchain/abi2api#readme",
+  "dependencies": {
+    "abi2lib": "0.0.1",
+    "abi2oas": "0.0.2"
+  }
+}
