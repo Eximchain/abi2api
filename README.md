@@ -1,7 +1,4 @@
 # abi2api (under construction)
-![GitHub package version](https://img.shields.io/github/package-json/v/badges/shields.svg)
-![Hex.pm](https://img.shields.io/hexpm/l/plug.svg)
-![node](https://img.shields.io/node/v/passport.svg)
 
 Autogenerate a `nodejs` server with a RESTful [OpenAPI](https://swagger.io/specification/) so you can communicate with your smart contract of choice via [web3](https://github.com/ethereum/web3.js/).  Encapsulate your smart contract so you can leverage the power of blockchain with the convenience of HTTP.
 
