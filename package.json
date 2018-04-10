@@ -1,6 +1,6 @@
 {
   "name": "abi2api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI which ingests smart contract metadata & autogenerates a RESTful nodejs server API",
   "main": "index.js",
   "bin": "index.js",

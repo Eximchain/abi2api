@@ -1,5 +1,7 @@
 # abi2api (under construction)
 
+**WARNING: This library is a work in progress, not yet fully functional.**
+
 Autogenerate a `nodejs` server with a RESTful [OpenAPI](https://swagger.io/specification/) so you can communicate with your smart contract of choice via [web3](https://github.com/ethereum/web3.js/).  Encapsulate your smart contract so you can leverage the power of blockchain with the convenience of HTTP.
 
 ## Usage
