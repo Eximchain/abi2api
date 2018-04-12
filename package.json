@@ -31,6 +31,8 @@
   "homepage": "https://github.com/Eximchain/abi2api#readme",
   "dependencies": {
     "abi2lib": "0.0.1",
-    "abi2oas": "0.0.2"
+    "abi2oas": "0.0.2",
+    "commander": "^2.15.1",
+    "shelljs": "^0.8.1"
   }
 }

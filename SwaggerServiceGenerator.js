@@ -1,7 +1,7 @@
 let fs = require("fs");
 let Handlebars = require("Handlebars");
 let OpenAPIGenerator = require("./OpenAPIGenerator");
-
+const abi2oas = require('abi2oas');
 
 /**
  * @class
@@ -16,7 +16,7 @@ class SwaggerServiceGenerator {
      * */
     constructor(config_file) {
         "use strict";
-        this.openAPIGenerator = new OpenAPIGenerator(config_file);
+        this.openAPIGenerator = new abi2oas(config_file);
         this.config = JSON.parse(fs.readFileSync(config_file));
     }
 

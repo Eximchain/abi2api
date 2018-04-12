@@ -1,6 +1,6 @@
 # abi2api (under construction)
 
-**WARNING: This library is a work in progress, not yet fully functional.**
+**WARNING: This library is a work in progress, not yet fully functional.  There may be API changes.**
 
 Autogenerate a `nodejs` server with a RESTful [OpenAPI](https://swagger.io/specification/) so you can communicate with your smart contract of choice via [web3](https://github.com/ethereum/web3.js/).  Encapsulate your smart contract so you can leverage the power of blockchain with the convenience of HTTP.
 
@@ -69,6 +69,18 @@ If `schemes`, `host`, or `basePath` are left blank, then `abi2api` will use the 
 2. The resulting JSON is passed through `swagger-codegen-cli@2.2.1` to generate the `nodejs` server stub code.  These methods do not yet communicate with web3.
 3. Your smart contract's metadata then passes through [`abi2lib`](https://github.com/Eximchain/abi2lib), an Eximchain library which generates boilerplate `web3` calls matching the contract spec.
 4. Finally, `abi2api` does some cleanup work to join the `nodejs` server stubs from Swagger with the boilerplate web3 calls from `abi2lib`.
+
+## Roadmap
+### Near Future
+- [x] Refactor base code into separate module
+- [x] Clean up docs
+- [] End-to-end build in one command
+- [] User-friendly command parsing via `commander`
+
+### Long-Term
+- [] Building automatic web3 bridges for a broader set of Swagger server languages
+- [] Allow output to use either web3 or quorum
+
 
 ## Licensing
 `abi2api` is developed & maintained by [Eximchain](https://eximchain.com/), released for public use under the Apache-2.0 License.  
