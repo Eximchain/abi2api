@@ -8,9 +8,9 @@
 - [] Write test cases
 
 ## Long-Term
-- [] Community contribution guidelines
-- [] Building automatic web3 bridges for a broader set of Swagger server languages
-- [] Allow output to use either web3 or quorum
+-[] Community contribution guidelines
+-[] Building automatic web3 bridges for a broader set of Swagger server languages
+-[] Allow output to use either web3 or quorum
 
 ## Low-Priority Tech Debt
 - [] Add option to autogenerate output directory if it doesn't exist
