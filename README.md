@@ -69,20 +69,8 @@ sample configuration...
 3. Your smart contract's metadata then passes through [`abi2lib`](https://github.com/Eximchain/abi2lib), an Eximchain library which generates boilerplate `web3` calls matching the contract spec.
 4. Finally, `abi2api` does some cleanup work to join the `nodejs` server stubs from Swagger with the boilerplate web3 calls from `abi2lib`.
 
-## Roadmap
-### Short-Term
-- [x] Refactor base code into separate module
-- [x] Clean up docs
-- [x] User-friendly command parsing via `commander`
-- [x] End-to-end build in one command
-- [] Write test cases
-
-### Long-Term
-- [] Building automatic web3 bridges for a broader set of Swagger server languages
-- [] Allow output to use either web3 or quorum
-
-### Low-Priority Tech Debt
-- [] Add option to autogenerate output directory if it doesn't exist
+## Development
+You can find [our roadmap](./ROADMAP.md) on Github.
 
 ## Licensing
 `abi2api` is developed & maintained by [Eximchain](https://eximchain.com/), released for public use under the Apache-2.0 License.  
