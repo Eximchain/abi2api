@@ -1,6 +1,5 @@
 let fs = require("fs");
-let Handlebars = require("Handlebars");
-let OpenAPIGenerator = require("./OpenAPIGenerator");
+let Handlebars = require("handlebars");
 const abi2oas = require('abi2oas');
 
 /**
@@ -14,10 +13,11 @@ class SwaggerServiceGenerator {
      * @description
      * Read's the contract schema which is built using truffle migrate and stores the schema.
      * */
-    constructor(config_file) {
-        "use strict";
-        this.openAPIGenerator = new abi2oas(config_file);
-        this.config = JSON.parse(fs.readFileSync(config_file));
+    constructor(contract_path, config={}) {
+        this.openAPIGenerator = new abi2oas(contract_path);
+        this.config = typeof config === 'string' ? 
+            JSON.parse(fs.readFileSync(config)) :
+            config;
     }
 
     /**
@@ -56,7 +56,7 @@ class SwaggerServiceGenerator {
                 return (list.indexOf(item) !== -1) ? options.fn(this) : "";
             }
         });
-        let abi = this.openAPIGenerator.cs.abi;
+        let abi = this.openAPIGenerator.contract.abi;
         this.service_files_code = {};
         for(let tag of this.openAPIGenerator.openAPI.tags){
             let methods = this.openAPIGenerator.openAPI.getMethodsForTag(tag);

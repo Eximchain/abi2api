@@ -1,11 +1,10 @@
 'use strict';
-let EHTController = require("{{path_to_eth_connector}}/Controller.js");
-
+let ETHController = require("{{path_to_eth_connector}}/Controller.js");
 
 {{#each methods}}
 {{#ifEquals type "function"}}
-{{#if outputs.length}}
-    {{#ifHas ../allowed_methods (append 'get_' name)}}
+{{#if constant}}
+{{#ifHas ../allowed_methods (append 'get_' name)}}
 /**
 * @function
 * @instance
@@ -13,16 +12,15 @@ let EHTController = require("{{path_to_eth_connector}}/Controller.js");
 * returns { Promise }
 **/
 exports.get_{{name}} = function({{name}}_get_params) {
-    return new EHTController().get_{{name}}(
+    return new ETHController().get_{{name}}(
         {{name}}_get_params.from,
-        {{#each outputs}} {{../name}}_get_params["{{#if name}}{{name}}{{else}}{{type}}{{/if}}"],
+        {{#each inputs}} 
+        {{../name}}_get_params["{{#if name}}{{name}}{{else}}{{type}}{{/if}}"],
         {{/each}}
     );
 };
 {{/ifHas}}
-{{/if}}
-
-{{#if inputs.length}}
+{{else }}
 {{#ifHas ../allowed_methods (append 'post_' name)}}
 /**
 * @function
@@ -31,14 +29,15 @@ exports.get_{{name}} = function({{name}}_get_params) {
 * returns { Promise }
 **/
 exports.post_{{name}} = function({{name}}_post_params) {
-    return new EHTController().post_{{name}}(
-        {{name}}_post_params.from, {{#if payalbe}} {{name}}_get_params.value, {{/if}}
-        {{#each inputs}} {{../name}}_post_params["{{#if name}}{{name}}{{else}}{{type}}{{/if}}"],
+    return new ETHController().post_{{name}}(
+        {{name}}_post_params.from, 
+        {{#if payable}} {{name}}_get_params.value, {{/if}}
+        {{#each inputs}}
+        {{../name}}_post_params["{{#if name}}{{name}}{{else}}{{type}}{{/if}}"],
         {{/each}}
     );
 };
 {{/ifHas}}
 {{/if}}
-
 {{/ifEquals}}
 {{/each}}

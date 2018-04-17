@@ -1,7 +1,7 @@
 {
   "name": "abi2api",
-  "version": "0.0.2",
-  "description": "CLI which ingests smart contract metadata & autogenerates a RESTful nodejs server API",
+  "version": "0.1.0",
+  "description": "Autogenerates a nodejs Swagger API for making web3.js calls to a smart contract of your choice.",
   "main": "index.js",
   "bin": "index.js",
   "preferGlobal": true,
@@ -30,9 +30,11 @@
   },
   "homepage": "https://github.com/Eximchain/abi2api#readme",
   "dependencies": {
-    "abi2lib": "0.0.1",
-    "abi2oas": "0.0.2",
+    "abi2lib": "^0.1.0",
+    "abi2oas": "^0.1.1",
     "commander": "^2.15.1",
+    "dot-prop": "^4.2.0",
+    "handlebars": "^4.0.11",
     "shelljs": "^0.8.1"
   }
 }
