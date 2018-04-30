@@ -1,6 +1,6 @@
 {
   "name": "abi2api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Autogenerates a nodejs Swagger API for making web3.js calls to a smart contract of your choice.",
   "main": "index.js",
   "bin": "index.js",
