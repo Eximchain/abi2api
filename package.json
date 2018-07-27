@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/Eximchain/abi2api#readme",
   "dependencies": {
-    "abi2lib": "^0.1.0",
+    "abi2lib": "^0.2.0",
     "abi2oas": "^0.1.1",
     "commander": "^2.15.1",
     "dot-prop": "^4.2.0",
